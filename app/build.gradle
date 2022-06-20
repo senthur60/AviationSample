@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.aviationsample'
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.aviationsample"
         minSdk 24
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -60,4 +60,13 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+    // Koin
+    implementation "io.insert-koin:koin-android:$koin_version"
+
+    // Koin Tests
+    testImplementation "io.insert-koin:koin-test:$koin_version"
+    testImplementation "io.insert-koin:koin-test-junit4:$koin_version"
+    testImplementation "org.mockito:mockito-inline:4.5.1"
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
 }
